@@ -82,17 +82,17 @@ class debounce(object):
         self.afire = False
         self.bfire = False
         self.cfire = False
-    
+        
     def read(self):
-		self.afire = False
-		self.bfire = False
-		self.cfire = False
-		buttondict = {'buta':False, 'butb':False, 'butc':False} 
-		buttondict['buta'] = self.afire
-		buttondict['butb'] = self.bfire
-		buttondict['butc'] = self.cfire
-
-		return buttondict
+        self.afire = False
+        self.bfire = False
+        self.cfire = False
+        buttondict = {'buta':False, 'butb':False, 'butc':False} 
+        buttondict['buta'] = self.afire
+        buttondict['butb'] = self.bfire
+        buttondict['butc'] = self.cfire
+        
+        return buttondict
 
     
 # The following function is merely a hardware tool so I can ensure my LED's were wired correctly.
