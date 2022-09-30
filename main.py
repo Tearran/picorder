@@ -737,84 +737,84 @@ class Main(object):
 
     # The following while loop catches ctrl-c exceptions. I use this structure so that status changes will loop back around and have a chance to activate different functions. It gets a little weird going forward, bear with me.
     while (status != "quit"):
-		try:
-			
-			# Using this loop as an example. This loop runs the startup animation played when you first boot the program.
-			while(status == "startup"):
-				# We activate each LED for a nice lamp test.
-				leda_on()
-				ledb_on()
-				ledc_on()
-				
-				# A simple pygame.time.wait allows the program to take a break through the cycle so it's not loading up the CPU with draws to screen. I just saved 75% of my CPU by switching to this.
-				pygame.time.wait(33)
-				# This next item grabs the pygame events, which includes keyboard events.
-				pygame.event.get()  
-				# this next item checks to see if the q key was pressed 
-				key = pygame.key.get_pressed()
-				# and if so breaks the loop and gets us to the shut down commands.
-				if key[pygame.K_q]:
-					cleangpio()
-					clearled()
-					status = "quit"
-				else:
-					# otherwise it updates the status by calling on the startUp function, which is passed our pygame display object, and the time since we booted our program.
-					status = startUp(surface,timeSinceStart)
-			
-			# The rest of these loops all handle a different mode, switched by buttons within the functions. 
-			while(status == "slidergo"):
-				leda_on()
-				ledb_off()
-				ledc_off()
-				pygame.event.get()
-				pygame.time.wait(50)
-				key = pygame.key.get_pressed()
 
-				if key[pygame.K_q]:
-					cleangpio()
-					clearled()
-					status = "quit"
-				else:
-					status = sliderScreen(surface,moire,tock,buttons,csvfile,rot,graphinit,humidGraph,tempGraph,pressGraph,graphtock)
-		
-
-			
-			while(status == "graphgo"):
-				leda_off()
-				ledb_on()
-				ledc_off()
-				pygame.event.get()
-				pygame.time.wait(50)
-				key = pygame.key.get_pressed()
-				if key[pygame.K_q]:
-					cleangpio()
-					clearled()
-					status = "quit"
-				else:
-					status = graphScreen(surface,humidGraph,tempGraph,pressGraph,moire,graphtock,graphinit,buttons,csvfile,rot)
-
-
-			while (status == "magnetgo"):
-				leda_off()
-				ledb_on()
-				ledc_off()
-				pygame.event.get()
-				pygame.time.wait(50)
-				key = pygame.key.get_pressed()
-				if key[pygame.K_q]:
-					cleangpio()
-					clearled()
-					status = "quit"
-				else:
-					#timeStart=time.time()
-					status = magnetScreen(surface,xGraph,yGraph,zGraph,moire,tock,graphinit,buttons,csvfile,rot)
+        # Using this loop as an example. This loop runs the startup animation played when you first boot the program.
+        while(status == "startup"):
+        	# We activate each LED for a nice lamp test.
+        	#leda_on()
+        	#ledb_on()
+        	#ledc_on()
+        	
+        	# A simple pygame.time.wait allows the program to take a break through the cycle so it's not loading up the CPU with draws to screen. I just saved 75% of my CPU by switching to this.
+        	pygame.time.wait(33)
+        	# This next item grabs the pygame events, which includes keyboard events.
+        	pygame.event.get()  
+        	# this next item checks to see if the q key was pressed 
+        	key = pygame.key.get_pressed()
+        	# and if so breaks the loop and gets us to the shut down commands.
+        	if key[pygame.K_q]:
+        		cleangpio()
+        		clearled()
+        		status = "quit"
+        	else:
+        		# otherwise it updates the status by calling on the startUp function, which is passed our pygame display object, and the time since we booted our program.
+        		status = startUp(surface,timeSinceStart)
+        
+        # The rest of these loops all handle a different mode, switched by buttons within the functions. 
+        while(status == "slidergo"):
+        	leda_on()
+        	ledb_off()
+        	ledc_off()
+        	pygame.event.get()
+        	pygame.time.wait(50)
+        	key = pygame.key.get_pressed()
+        
+        	if key[pygame.K_q]:
+        		cleangpio()
+        		clearled()
+        		status = "quit"
+        	else:
+        		status = sliderScreen(surface,moire,tock,buttons,csvfile,rot,graphinit,humidGraph,tempGraph,pressGraph,graphtock)
+        
+        
+        
+        while(status == "graphgo"):
+        	leda_off()
+        	ledb_on()
+        	ledc_off()
+        	pygame.event.get()
+        	pygame.time.wait(50)
+        	key = pygame.key.get_pressed()
+        	if key[pygame.K_q]:
+        		cleangpio()
+        		clearled()
+        		status = "quit"
+        	else:
+        		status = graphScreen(surface,humidGraph,tempGraph,pressGraph,moire,graphtock,graphinit,buttons,csvfile,rot)
+        
+        
+        while (status == "magnetgo"):
+        	leda_off()
+        	ledb_on()
+        	ledc_off()
+        	pygame.event.get()
+        	pygame.time.wait(50)
+        	key = pygame.key.get_pressed()
+        	if key[pygame.K_q]:
+        		cleangpio()
+        		clearled()
+        		status = "quit"
+        	else:
+        		#timeStart=time.time()
+        		status = magnetScreen(surface,xGraph,yGraph,zGraph,moire,tock,graphinit,buttons,csvfile,rot)
 
 		# If CTRL-C is received the program gracefully turns off the LEDs and resets the GPIO.
-		except KeyboardInterrupt:
-			clearled()
-			cleangpio()
-			status = "quit"
+
+try:
 	   
 # the following call starts our program         
-Main()
-
+    Main()
+except KeyboardInterrupt:
+    clearled()
+    cleangpio()
+    status = "quit"
