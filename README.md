@@ -23,12 +23,17 @@ An evirmental scanner
     - [list](https://gitlab.com/tearran/its-i2cDevices) of avalible i2cdevices   
 
 ## Done
-- data
-  - Standardize sensor value retrieval through
-  - [list](https://gitlab.com/tearran/its-i2cDevices) bash pipes
+ 
+ #### Data:
+  - Standardize sensor values
+  
   - passing os system values
-- error handeling
-   - clean exit with keyboard interup
+ #### Logic
+  - error handeling
+    - clean exit with keyboard interupt
+    - report "0" value on sensor error. todo verbose mode 
+  - bash pipes [Scripts ](https://gitlab.com/tearran/its-i2cDevices)
+  
 
 
 ## Looking into:
@@ -47,3 +52,5 @@ Changing in development
 ## Sources
 This project was made possible by information and inspiration provided by these sources:
 - https://github.com/directive0/picorder
+- https://github.com/tearran/
+- more to come
