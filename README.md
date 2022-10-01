@@ -5,7 +5,7 @@ Purpose:
 
 Explore a 3 layer softeware stack.
 
-- Presentation Layer - Displays, graphs, lights
+- Presentation Layer - Displays, graphs, lights, sound
 - Logic layer - Drivers, switches, timers
 - Data Layer - logs, status, and arrays
 
