@@ -1,19 +1,18 @@
 # picoder (deprecated)
 Hard Fork of the deprecated [picorder](https://github.com/directive0/picorderOS)
 
-Purpose:  
+### Purpose: 
 
 Explore a 3 layer softeware stack.
-
 - Presentation Layer - Displays, graphs, lights, sound
 - Logic layer - Drivers, switches, timers
 - Data Layer - logs, status, and arrays
 
 Why: 
 Flexability.
-- increase sensor compatibility - Many existing tutorials and example scripts are sutible to be the base of the logic level. others just need minor text formating 
-- Plug in and play for i2c devices - load only the avalible devices
-- Decrease base system file size and line count -  This can be used for data store.
+- increase sensor compatibility 
+- Plug in and play for i2c devices
+- Decrease base file size and line count
 
 
 An evirmental scanner
