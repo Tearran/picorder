@@ -6,14 +6,18 @@ Hard Fork of the deprecated [picorder](https://github.com/directive0/picorderOS)
 Explore a 3 layer softeware stack.
 - Presentation Layer - Displays, graphs, lights, sound
 - Logic layer - Drivers, switches, timers
-- Data Layer - logs, status, and arrays
+- Data Layer - logs, status, and arrays to Translate/bridge/cummunicate between layers.
 
 Why: 
 Flexability.
 - increase sensor compatibility 
--  
+- Compatibility with node.js, perl, php, c, so on and ... 
 - Plug in and play for i2c devices
 - Decrease base file size and line count
+- Most importantly to split tasks by instperation.
+  - Creative - Work on Presentation Layer
+  - Problem solving - Work on Logic layer
+  - Research - work on Data Layer 
 
 
 An evirmental scanner
