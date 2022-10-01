@@ -19,37 +19,27 @@ Flexability.
   - Problem solving - Work on Logic layer
   - Research - work on Data Layer 
 
-
-An evirmental scanner
-
-# Requiered
-- Raspberry Pi
-  - sensors - one of the following
-    - [list](https://gitlab.com/tearran/its-i2cDevices) of avalible i2cdevices   
-
 ## Done
  
  #### Data:
   - Standardize sensor values
-  
   - passing os system values
  #### Logic
   - error handeling
     - clean exit with keyboard interupt
     - report "0" value on sensor error. todo verbose mode 
-  - bash pipes [Scripts ](https://gitlab.com/tearran/its-i2cDevices)
+  - remove requierment
+    - psutil replaced with vanilla/build-in
+  - compatible sensors  [Scripts ](https://gitlab.com/tearran/its-i2cDevices)
   
-
-
-## Looking into:
-- ~upateing to python3~ working 
+## Exploring:
+- ~update to python3~ working 
 - remove pip library dependence.  
   - packeage and deploy 
   - vanilla option offers builtin support for reliable security updates 
 - data 
    - read sqlite3
    - write sqlite3 
-
 
 ## Requirements:
 Changing in development
