@@ -38,7 +38,7 @@ An evirmental scanner
   - packeage and deploy 
   - vanilla option offers builtin support for reliable security updates 
 - data 
-   - ~read sqlite3~ working
+   - read sqlite3
    - write sqlite3 
 
 
