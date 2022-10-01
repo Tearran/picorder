@@ -11,6 +11,7 @@ Explore a 3 layer softeware stack.
 Why: 
 Flexability.
 - increase sensor compatibility 
+-  
 - Plug in and play for i2c devices
 - Decrease base file size and line count
 
