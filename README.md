@@ -47,5 +47,3 @@ Changing in development
 ## Sources
 This project was made possible by information and inspiration provided by these sources:
 - https://github.com/directive0/picorder
-- https://hackaday.io/project/5437-star-trek-tos-picorder
-- https://github.com/tobykurien/rpi_lcars
