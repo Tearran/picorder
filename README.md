@@ -1,7 +1,19 @@
-# Enviro scanner. Name TBD
-This software is in heavy development 
-
+# picoder (deprecated)
 Hard Fork of the deprecated [picorder](https://github.com/directive0/picorderOS)
+
+Purpose:  
+
+Explore a 3 layer softeware stack.
+
+- Presentation Layer - Displays, graphs, lights
+- Logic layer - Drivers, switches, timers
+- Data Layer - logs, status, and arrays
+
+Why: 
+Flexability.
+- increase sensor compatibility - Many existing tutorials and example scripts are sutible to be the base of the logic level. others just need minor text formating 
+- Plug in and play for i2c devices - load only the avalible devices
+- Decrease base system file size and line count -  This can be used for data store.
 
 
 An evirmental scanner
@@ -12,35 +24,24 @@ An evirmental scanner
     - [list](https://gitlab.com/tearran/its-i2cDevices) of avalible i2cdevices   
 
 ## Done
-- Standardize sensor value retrieval through
+- data
+  - Standardize sensor value retrieval through
   - [list](https://gitlab.com/tearran/its-i2cDevices) bash pipes
   - passing os system values
-- data 
-   - read sqlite
-   - write sqlite 
+- error handeling
+   - clean exit with keyboard interup
 
 
 ## Looking into:
-- upateing to python3
+- ~upateing to python3~ working 
 - remove pip library dependence.  
   - packeage and deploy 
   - vanilla option offers builtin support for reliable security updates 
-- error handeling
-   - clean exit with keyboard interup
-   - clean exit with gpio button press
-   - Report prompt possible fix
-    example from [its_sensehat.py](https://gitlab.com/tearran/its-senseHat)
-    ```bash
-    import sys # built-in mod
+- data 
+   - ~read sqlite3~ working
+   - write sqlite3 
 
-    try:
-      from sense_hat1 import SenseHat
-    except ModuleNotFoundError:
-      print("can not fint sense-hat try;")
-      print("\tsudo apt install sense-hat")
-      sys.exit()
-       
-    ```   
+
 ## Requirements:
 Changing in development
 
