@@ -1,4 +1,4 @@
-# picoder 
+# picorder 
 Hard Fork of the deprecated [picorder](https://github.com/directive0/picorderOS)
 
 ### Purpose: 
