@@ -36,7 +36,7 @@ Flexability.
 - ~update to python3~ working 
 - remove pip library dependence.  
   - packeage and deploy 
-  - vanilla option offers builtin support for reliable security updates 
+  - vanilla option offers builtin support for reliablilty, security and, updates 
 - data 
    - read sqlite3
    - write sqlite3 
@@ -45,7 +45,7 @@ Flexability.
 Changing in development
 
 ## Sources
-This project was made possible by information and inspiration provided by these sources:
+This project was made possible by information and inspirations:
 - https://github.com/directive0/picorder
 - https://github.com/tearran/
 - more to come
